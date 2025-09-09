@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    /* border: .1rem solid red; */
+}
+
+:root{
+    --lead:#212121;
+    --gold-finger:#ff0000e8;
+    --eye-ball:#FFFDF7;
+    --hint-yellow:#FCF1CC;
+    --pure-white:#FFF;
+    
+}
+
+body{
+    background-color: var(--eye-ball);
+
+}
+
+/* Basic Styling */
+
+a{
+    font-size: 1.1rem;
+    text-decoration: none;
+    color:var(--lead)
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+li{
+    list-style:none;
+}
+
+.between{
+    justify-content: space-between;
+}
+
+.gap-2{
+    gap:2rem;
+}
+
+.gap-3{
+    gap:3rem;
+}
+
+.wrapper{
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    padding-inline: 1.5rem;
+}
+
+img{
+    max-width:100%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+.p-top{
+    padding-top: 10rem;
+}
+
+/* Header Styling */
+
+.navbar{
+    min-height: 8vh;
+    background: var(--pure-white);
+}
+
+.logo{
+    font-size:2rem;
+    font-weight: bold;
+    color:var(--gold-finger)
+}
+
+.btn{
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background: var(--gold-finger);
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    color: var(--pure-white);
+    box-shadow: rgba(0, 0, 0, 0.608) 0 2px 1px;
+    transition: 0.3s ease-in-out;
+    
+}
+
+.btn:hover{
+    background: var(--lead);
+}
+
+.cart-icon{
+    font-size:1.3rem;
+    position:relative;
+}
+
+.cart-icon .cart-value{
+    position: absolute;
+    top: -5px;
+    right:-10px;
+    font-size: 0.85rem;
+    width:20px;
+    aspect-ratio: 1;
+    border-radius: 100vw;
+    background: var(--gold-finger);
+    color: var(--lead);
+    text-align: center;
+    line-height: 20px;
+    
+}
+
+.desktop-action .hamburger{
+    font-size: 1.5rem;
+    display: none;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+/* Section Styling */
+
+.hero-section{
+   
+    min-height: calc(100vh - 14vh);
+}
+
+.content,
+.image-container{
+    flex:1;
+    flex-basis:300px;
+}
+
+h1{
+    font-size:5.6vw;
+    color: var(--lead);
+}
+
+h1 span{
+    color: var(--gold-finger)
+}
+
+p{
+    font-size: 1.25rem;
+    color: gray;
+    line-height: 1.8rem;
+    font-weight: 400;
+}
+.para{
+    margin-block:2rem;
+    max-width:550px;
+}
+
+.social-icon{
+    background:var(--hint-yellow);
+    width:3rem;
+    aspect-ratio: 1;
+    border-radius:1rem;
+    font-size:1.2rem;
+    text-align: center;
+    line-height: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.608) 0 2px 1px;
+    transition: 0.3s ease-in-out;
+}
+
+.social-icon:hover{
+    background:var(--lead);
+    color:var(--pure-white);
+}
+
+
+
+
+
+/* Footer Styling */
+
+
+
+
+
+
+/* MEdia Query */
+
+@media only screen and (max-width:780px){
+
+    /* HEADER STYLING */
+
+    .navlist, 
+    .desktop-action .btn{
+        display: none;
+    }
+    .desktop-action .hamburger{
+        display: block;
+    }
+
+    .mobile-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:2rem;
+        position: absolute;
+        top:20%;
+        left:-100%;
+        transform:translateX(-50%);
+        width: 20rem;
+        padding: 2rem;
+        background: var(--pure-white);
+        border: 0.1rem solid var(--gold-finger);
+        border-radius: 2rem;
+        box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px,rgba(0, 0, 0, 0.05) 8px 8px 8px inset;
+        transition: 0.5s ease-in-out
+    }
+
+    .mobile-menu-active{
+        left:50%;
+        transform: translateX(-50%)
+    }
+
+         /* SECTION STYLING  */
+
+        h1{
+            font-size: 3.6rem;
+        }
+
+        .content{
+            padding: 3rem;
+        }
+
+        .gap-2{
+            gap: 1.4rem;
+        }
+
+        .gap-4{
+            gap:4rem;
+        }
+
+
+
+        .hero-section {
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        .content,
+        .image-container {
+            flex-basis: auto;
+            width: 100%;
+        }
+    
+        .image-container img {
+            max-width: 80%;
+            margin: 1rem auto;
+        }
+    
+}
