@@ -1,0 +1,50 @@
+[
+    {
+       "id": 1,
+       "name": "Cheese Burger" ,
+       "price": "₹ 70.00",
+       "image": "images/burger.png"
+    },
+    {
+       "id": 2,
+       "name": "Veggie Pizza" ,
+       "price": "₹ 180.00",
+       "image": "images/vegPizza.png"
+    },
+    {
+       "id": 3,
+       "name": "Sweet Corn Pizza" ,
+       "price": "₹ 120.00",
+       "image": "images/sweetCorn1.png"
+    },
+    {
+       "id": 4,
+       "name": "White Sauce Pasta" ,
+       "price": "₹ 130.00",
+       "image": "images/whiteSaucePasta.png"
+    },
+    {
+       "id": 5,
+       "name": "Grilled Sandwich" ,
+       "price": "₹ 80.00",
+       "image": "images/GrilledSandwich.png"
+    },
+    {
+       "id": 6,
+       "name": "French Fries" ,
+       "price": "₹ 60.00",
+       "image": "images/fries.png"
+    },
+    {
+       "id": 7,
+       "name": "Cold Coffee" ,
+       "price": "₹ 90.00",
+       "image": "images/coldCoffee.png"
+    },
+    {
+       "id": 8,
+       "name": "Hot Coffee" ,
+       "price": "₹ 40.00",
+       "image": "images/hotCoffee.png"
+    }
+]

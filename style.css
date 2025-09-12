@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
-    /* border: .1rem solid red; */
 }
 
 :root {
@@ -21,7 +20,6 @@ body {
 }
 
 /* Basic Styling */
-
 a {
     font-size: 1.1rem;
     text-decoration: none;
@@ -93,7 +91,6 @@ img {
 }
 
 /* Header Styling */
-
 .navbar {
     min-height: 8vh;
     background: var(--pure-white);
@@ -149,7 +146,6 @@ img {
 }
 
 /* Section Styling */
-
 .hero-section {
     min-height: calc(100vh - 14vh);
 }
@@ -200,7 +196,6 @@ p {
 }
 
 /* Section 1 */
-
 h5 {
     font-size: 1.2rem;
     letter-spacing: 0.2rem;
@@ -220,56 +215,97 @@ h3 {
     color: var(--lead);
 }
 
-.service-card h3 {
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
+/* ---------- SERVICE CARDS ---------- */
+.service-card {
+    width: 300px;
+    height: 350px;
+    padding: 1rem;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
 }
 
 .service-card .images-container {
     width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .service-card .images-container img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 1rem;
-    display: block;
-    margin: 0 auto;
+    height: 100%;
+    object-fit: contain;
 }
 
-/* Section 2 */
+.service-card h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--lead);
+}
 
+.service-card p {
+    font-size: 1rem;
+    color: gray;
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Section 2 ---------- ORDER CARDS ---------- */
 .order-card {
-    flex: 1;
-    flex-basis: 300px;
+    width: 250px;
+    height: 400px;
     background: var(--pure-white);
-    padding: 0 1rem 2rem 1rem;
+    padding: 1rem;
     border: 0.1rem solid var(--red-bull);
-    border-radius: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px, rgba(0, 0, 0, 0.05) 8px 8px 8px inset;
+    border-radius: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.order-card .card-image {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .order-card img {
-    width: 15rem;
-    filter: drop-shadow(rgba(0, 0, 0, 0.2) 0 10px 10px);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-h4 {
-    font-size: 1.8rem;
+.order-card h4 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
     color: var(--lead);
 }
 
 .order-card .price {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
+    font-weight: bold;
     color: var(--red-bull);
-    padding: 1.3rem 0 2rem 0;
+    margin: 0.5rem 0 1rem 0;
 }
 
 /* Cart Tab */
-
 .cart-tab {
     background: var(--hint-yellow);
     position: fixed;
@@ -366,7 +402,6 @@ h4 {
 }
 
 /* Section 3 */
-
 .review-container {
     width: 650px;
     max-width: 100%;
@@ -406,12 +441,12 @@ h4 {
 }
 
 /* Section 4 - App Section */
-
 .app-container {
     background: var(--hint-yellow);
     padding: 3rem 6rem;
     border-radius: 3rem;
 }
+
 .app-container .image-container img {
     mix-blend-mode: multiply;
     background: transparent;
@@ -427,7 +462,6 @@ h4 {
 }
 
 /* Section 5 - Newsletter */
-
 .input-container {
     width: 43rem;
     max-width: 100%;
@@ -451,7 +485,6 @@ input[type="email"]:focus {
 }
 
 /* Footer */
-
 .footer-container {
     margin-top: 10rem;
     padding-block: 4rem;
@@ -643,12 +676,25 @@ input[type="email"]:focus {
         line-height: 2.5rem;
     }
 
-    .service-card img {
-        height: 160px;
+    .service-card {
+        height: auto;
+    }
+
+    .service-card .images-container {
+        height: 150px;
+    }
+
+    .order-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .order-card .card-image {
+        height: 150px;
     }
 
     .order-card img {
-        width: 12rem;
+        object-fit: contain;
     }
 
     .input-container {
