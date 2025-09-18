@@ -45,11 +45,9 @@
                     <span class="cart-value">0</span>
                 </a>
 
-                <a href="#" class="btn">
-                    Sign in
-                    &nbsp;
-                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                </a>
+                <button class="btn auth-btn">
+          Sign in &nbsp; <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
 
                 <a href="#" class="hamburger">
                     <i class="fa-solid fa-bars"></i>
@@ -72,11 +70,9 @@
                     <a href="./Contact_Us.html">Contact_us</a>
                 </li>
                 <li>
-                    <a href="#" class="btn">
-                        Sign in
-                        &nbsp;
-                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    </a>
+                   <button class="btn auth-btn">
+            Sign in &nbsp; <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          </button>
                 </li>
             </ul>
 
@@ -421,6 +417,17 @@
         <h6> Copy rights &copy; <span id="copyRights">Amit Chauhan</span></h6>
     </footer>
 
+
+    <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Sign In</h2>
+      <input type="text" id="username" placeholder="Enter Username" required>
+      <input type="password" id="password" placeholder="Enter Password" required>
+      <button id="loginBtn">Login</button>
+    </div>
+  </div>
+  
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </body>

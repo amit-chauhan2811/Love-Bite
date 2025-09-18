@@ -187,3 +187,69 @@ const initApp = () => {
 };
 
 initApp();
+
+
+// ------------------ LOGIN FUNCTIONALITY ------------------
+
+const authBtns = document.querySelectorAll(".auth-btn");
+const loginModal = document.getElementById("loginModal");
+const closeModalBtn = document.getElementById("closeModal");
+const loginBtn = document.getElementById("loginBtn");
+
+// Track login state
+let currentUser = localStorage.getItem("loggedInUser");
+
+// Update button text
+const updateAuthUI = () => {
+  authBtns.forEach(btn => {
+    if (currentUser) {
+      btn.innerHTML = `Signout &nbsp;<i class="fa-solid fa-arrow-right-from-bracket"></i>`;
+    } else {
+      btn.innerHTML = `Sign in &nbsp;<i class="fa-solid fa-arrow-right-from-bracket"></i>`;
+    }
+  });
+};
+updateAuthUI();
+
+// Open modal or logout
+authBtns.forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (currentUser) {
+      localStorage.removeItem("loggedInUser");
+      currentUser = null;
+      updateAuthUI();
+      alert("Logged out successfully ✅");
+    } else {
+      loginModal.style.display = "flex";
+    }
+  });
+});
+
+// Close modal
+if (closeModalBtn) {
+  closeModalBtn.onclick = () => {
+    loginModal.style.display = "none";
+  };
+}
+window.onclick = (e) => {
+  if (e.target === loginModal) loginModal.style.display = "none";
+};
+
+// Login process
+if (loginBtn) {
+  loginBtn.addEventListener("click", () => {
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    if (username === "admin" && password === "12345") {
+      localStorage.setItem("loggedInUser", username);
+      currentUser = username;
+      updateAuthUI();
+      loginModal.style.display = "none";
+      alert("Login Successful ✅");
+    } else {
+      alert("Invalid credentials ❌ (Try admin / 12345)");
+    }
+  });
+}
